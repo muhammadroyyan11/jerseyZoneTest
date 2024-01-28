@@ -5,7 +5,7 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
 	
-	<title>Clean Form - PHP Working Contact Quote Booking JobApply Reservation Multi-purpose Form</title>	
+	<title>Form Pelamar</title>	
 	<!-- set your website meta description and keywords -->
 	<meta name="description" content="Add your business website description here">
 	<meta name="keywords" content="Add your business website keywords here">
@@ -27,103 +27,55 @@
 			<div class="formrow">
 				<div class="col-12">
 					<div class="contact-form-title-wrap">
-						<h2 class="title-text"><span>Wanna <strong>Talk</strong></span></h2>
+						<h2 class="title-text"><span>Formulir <strong>Pelamar</strong></span></h2>
 						<div class="title-line text-center">
 							<span class="short-line"></span>
 							<span class="long-line"></span>
 						</div><!-- end title-line -->
 					</div><!-- end contact-form-title-wrap -->
 					<div class="intro-text text-center">
-						A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni et perspiciatis voluptatum eaque, rem voluptates repellendus id molestiae asperiores! Eveniet laboriosam at architecto nesciunt blanditiis nostrum reiciendis? Suscipit, officiis sequi.
 					</div><!-- end intro-text -->
 				</div><!-- end col-12 -->
 				
-				<!-- start google map -->
-				<div class="col-12">
-					<div id="map"></div>
-				</div><!-- end col-12 --> 
-				<!-- end google map -->
-				
-				<!-- start contact Info -->
-				<div class="col-12">
-					<div class="contactInfo-wrap">
-						<div class="col-12">
-							<div class="title-box">
-								<h3>Contact <strong>Info</strong></h3>
-							</div><!-- end title-box --> 
-						</div><!-- end col-12 -->
-						<div class="col-4">
-							<div class="contact-item">
-								<div class="contact-item-inner">
-									<div class="contact-icon">
-										<i class="fa-solid fa-location-dot"></i>
-									</div><!-- end contact-icon -->
-									<div class="contact-desc">
-										<h4>70 Trent Rd, Luton LU3 1TA</h4>
-									</div><!-- end contact-desc -->
-								</div><!-- end contact-item-inner -->
-							</div><!-- end contact-item -->
-						</div><!-- end col-4 -->
-						<div class="col-4">
-							<div class="contact-item">
-								<div class="contact-item-inner">
-									<div class="contact-icon">
-										<i class="fa-solid fa-envelope"></i>
-									</div><!-- end contact-icon -->
-									<div class="contact-desc">
-										<h4><a href="mailto:sales@yourwebsite.com">sales@website.com</a></h4>
-									</div><!-- end contact-desc -->
-								</div><!-- end contact-item-inner -->
-							</div><!-- end contact-item --> 
-						</div><!-- end col-4 -->
-						<div class="col-4">
-							<div class="contact-item">
-								<div class="contact-item-inner">
-									<div class="contact-icon">
-										<i class="fa-solid fa-phone"></i>
-									</div><!-- end contact-icon -->
-									<div class="contact-desc">
-										<h4><a href="tel:000-0000-0000">+000 0000 0000</a></h4>
-									</div><!-- end contact-desc -->
-								</div><!-- end contact-item-inner --> 
-							</div><!-- end contact-item --> 
-						</div><!-- end col-4 -->
-					</div><!-- end contactInfo-wrap -->
-				</div><!-- end col-12 -->
-				<!-- end contact Info -->
-								
 				<!-- start contact form -->
 				<div class="col-8 col-offset-2">
 					<div class="title-box">
-						<h3>Write <strong>message</strong></h3>
+						<h3>Mohon <strong>isi form yang ada dibawah</strong></h3>
 					</div><!-- end title-box -->
 					
 					<!-- start contact form -->
-					<form id="contactForm" name="contactform" data-toggle="validator" class="mgscleanform">
+					<form id="contactForm" name="contactform" action="applicant-process.php"  method="POST" enctype="multipart/form-data">
 						<span class="sub-text">* Required fields</span>
 						<div id="msgContactSubmit" class="hidden"></div>
 						<div class="form-group has-feedback">
 							<div class="help-block with-errors"></div>
-							<input name="fname" id="fname" class="form-control" type="text" required data-error="Please enter Name"> 
+							<input name="fname" id="fname" class="form-control" type="text" required data-error="Masukkan nama anda"> 
 							<div class="input-group-icon"><i class="fa-solid fa-user"></i></div>
-							<label class="form-label">Your Name*</label>
+							<label class="form-label">Nama lengkap*</label>
+						</div><!-- end form-group -->
+                        <div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<input name="date" id="todaydate" disabled class="form-control" type="text"> 
+							<div class="input-group-icon"><i class="fa-solid fa-calendar-check"></i></div>
+							<!-- <label class="form-label">Tanggal Input*</label> -->
 						</div><!-- end form-group -->
 						<div class="form-group has-feedback">
 							<div class="help-block with-errors"></div>
-							<input name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" type="email" required data-error="Please enter valid Email"> 
+							<input name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" type="email" required data-error="Masukkan email anda"> 
 							<div class="input-group-icon"><i class="fa-solid fa-envelope"></i></div>
-							<label class="form-label">Your Email*</label>
+							<label class="form-label">Email Aktif*</label>
 						</div><!-- end form-group -->
 						<div class="form-group has-feedback">
 							<div class="help-block with-errors"></div>
-							<input name="phone" id="phone" class="form-control" type="text" required data-error="Please enter valid Phone">
-							<div class="input-group-icon"><i class="fa-solid fa-phone"></i></div>
-							<label class="form-label">Contact Phone*</label>
+							<input name="ages" id="ages" class="form-control" type="text" required data-error="Masukkan usia anda">
+							<div class="input-group-icon"><i class="fa-solid fa-calendar"></i></div>
+							<label class="form-label">Usia*</label>
 						</div><!-- end form-group -->
 						<div class="form-group has-feedback">
 							<div class="help-block with-errors"></div>
-							<select name="service" id="service" class="form-control" required data-error="Please Select Service">
-								<option value="">--- Select a Sevice* ---</option>
+							<select name="dept" id="dept" class="form-control" required data-error="Pilih bidang yang anda lamar">
+								<option value="">--- Bidang yang dilamar* ---</option>
 								<option value="App Development">App Development</option>
 								<option value="Web Design">Web Design</option>
 								<option value="Graphic Design">Graphic Design</option>
@@ -131,11 +83,28 @@
 							</select>
 							<div class="input-group-icon"><i class="fa-solid fa-gear"></i></div> 
 						</div><!-- end form-group -->
-						<div class="form-group has-feedback">
+                        <div class="form-group has-feedback">
 							<div class="help-block with-errors"></div>
-							<input name="subject" id="subject" class="form-control" type="text" required data-error="Please enter Subject">
-							<div class="input-group-icon"><i class="fa-solid fa-book"></i></div>
-							<label class="form-label">Subject*</label>
+							<select name="education" id="education" class="form-control" required data-error="Pilih Pendidikan terakhir anda">
+								<option value="">--- Pendidikan terakhir* ---</option>
+								<option value="SMP">SMP</option>
+								<option value="SMA/SMK">SMA/SMK</option>
+								<option value="D1">D1</option>
+								<option value="D2">D2</option>
+								<option value="D3">D3</option>
+								<option value="D4">D4</option>
+								<option value="S1">S1</option>
+							</select>
+							<div class="input-group-icon"><i class="fa-solid fa-gear"></i></div> 
+						</div><!-- end form-group -->
+                        <div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<select name="branch" id="branch" class="form-control" required data-error="Pilih Cabang yang anda lamar">
+								<option value="">--- Cabang yang dipilih* ---</option>
+								<option value="App Development">Malang</option>
+								<option value="Web Design">Surabaya</option>
+							</select>
+							<div class="input-group-icon"><i class="fa-solid fa-gear"></i></div> 
 						</div><!-- end form-group -->
 						<div class="form-group has-feedback">
 							<div class="help-block with-errors"></div>
@@ -143,15 +112,15 @@
 							<div class="input-group-icon"><i class="fa-solid fa-info"></i></div>
 							<label class="form-label">Write comment here*</label>
 						</div><!-- end form-group -->
+                        <div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+                            Upload CV anda : <br>
+							<input type="file" name="file" id="file" style="margin-top: 10px;" >
+						</div><!-- end form-group -->
 						<div class="form-group">
 							<div class="help-block with-errors"></div>
 							<div id="humanCheckCaptchaBox"></div><div id="firstDigit"></div> + <div id="secondDigit"></div> = <input name="humanCheckCaptchaInput" id="humanCheckCaptchaInput" placeholder="" maxlength="3" class="form-control" type="text" required data-error="Please solve Human Check Captcha">
 						</div><!-- end form-group -->
-						<!-- <div class="form-group">
-							<ul class="mgsstyle-checkbox mgscheckbox-style list-unstyled">
-								<li><input name="usercopy" id="usercopy" type="checkbox" value="1"><label for="usercopy">Send a copy to My email</label></li>
-							</ul>
-						</div> -->
 						<!-- end form-group -->
 						<div class="form-group has-feedback">
 							<div class="help-block with-errors"></div>
@@ -189,9 +158,9 @@
 	<!-- Form Validator -->
 	<script src="js/validator.min.js"></script>
 	<!-- contact form Js -->
-	<script src="js/contact-form.js"></script>
+	<script src="js/applicant-form.js"></script>
 	<!-- Google Map Js -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
-	
+	<script> document.getElementById("todaydate").value = new Date().toLocaleDateString(); </script>
 </body>
 </html>

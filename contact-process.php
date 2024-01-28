@@ -36,47 +36,49 @@
 	
 	$success = '';
 	if (!$errormsg){
+
+		echo "success";
 		
-		require_once "mgs-functions.php";
+		// require_once "mgs-functions.php";
 		
-		//email subject (Change here)
-		if($subject)
-			$mail->Subject = $subject;
-		else
-			$mail->Subject = "New Clean Form Demo Contact Request Submitted";
+		// //email subject (Change here)
+		// if($subject)
+		// 	$mail->Subject = $subject;
+		// else
+		// 	$mail->Subject = "New Clean Form Demo Contact Request Submitted";
 		
-		$mgsetemple = true;		//Boolean true/false	true: email template	false: plain text email
-		$body_message = "";
-		if(!$mgsetemple) {
-			//prepare email body [for Plain email use this]
-			$body_message .= "Sender IP: " . get_client_ip() ."<br>";
-			$body_message .= "Sender Name: " . $fname ."<br>";
-			$body_message .= "Sender email: " . $email ."<br>";
-			$body_message .= "Sender Phone: " . $phone ."<br>";
-			$body_message .= "Required Service: " . $service ."<br>";
-			$body_message .= "\n\n". $message;
-		}
-		else{			
-			//prepare email body [Using email template]
-			$body_message = file_get_contents('mgsc-email-template/mgsc-email-template.php');
-			$mgsemailshorttag = array("[mgs-sender-ip]", "[mgs-sender-name]", "[mgs-sender-email]", "[mgs-sender-phone]", "[mgs-sender-service]", "[mgs-sender-message]");
-			$mgsemailshorttagvalue   = array(get_client_ip(), $fname, $email, $phone, $service, $message);
-			$body_message = str_replace($mgsemailshorttag, $mgsemailshorttagvalue, $body_message);
-		}
+		// $mgsetemple = true;		//Boolean true/false	true: email template	false: plain text email
+		// $body_message = "";
+		// if(!$mgsetemple) {
+		// 	//prepare email body [for Plain email use this]
+		// 	$body_message .= "Sender IP: " . get_client_ip() ."<br>";
+		// 	$body_message .= "Sender Name: " . $fname ."<br>";
+		// 	$body_message .= "Sender email: " . $email ."<br>";
+		// 	$body_message .= "Sender Phone: " . $phone ."<br>";
+		// 	$body_message .= "Required Service: " . $service ."<br>";
+		// 	$body_message .= "\n\n". $message;
+		// }
+		// else{			
+		// 	//prepare email body [Using email template]
+		// 	$body_message = file_get_contents('mgsc-email-template/mgsc-email-template.php');
+		// 	$mgsemailshorttag = array("[mgs-sender-ip]", "[mgs-sender-name]", "[mgs-sender-email]", "[mgs-sender-phone]", "[mgs-sender-service]", "[mgs-sender-message]");
+		// 	$mgsemailshorttagvalue   = array(get_client_ip(), $fname, $email, $phone, $service, $message);
+		// 	$body_message = str_replace($mgsemailshorttag, $mgsemailshorttagvalue, $body_message);
+		// }
 		
-		$mail->Body = $body_message;	
+		// $mail->Body = $body_message;	
 		
-		//send mail
-		if(!$mail->send()) {
-			echo "Mailer Error: " . $mail->ErrorInfo;
-		}
-		else {
-			//send confirmation email
-			if($mgssendconfirmation){
-				require_once "mgs-send-confirmation.php";
-			}
-			echo "success";		//DO NOT CHNAGE THIS LINE (required)
-		}
+		// //send mail
+		// if(!$mail->send()) {
+		// 	echo "Mailer Error: " . $mail->ErrorInfo;
+		// }
+		// else {
+		// 	//send confirmation email
+		// 	if($mgssendconfirmation){
+		// 		require_once "mgs-send-confirmation.php";
+		// 	}
+		// 	echo "success";		//DO NOT CHNAGE THIS LINE (required)
+		// }
 		
 	}
 	else {

@@ -154,6 +154,26 @@
     margin: 0;
 }
 
+/*Applicant Style*/
+#applicant-form-section {
+	padding: 60px 0 30px;
+}
+#applicant-form-section #map {
+	border: 1px solid #fb9902;
+	border-radius: 4px;
+	height: 374px;
+	margin: 0 0 30px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#applicant-form-section .map-marker h3 {
+	margin: 0 0 10px;
+}
+#applicant-form-section .map-marker > p {
+    margin: 0;
+}
+
 /*CONTACT INFO*/
 .contactInfo-wrap {
     margin: 0 auto 30px;
