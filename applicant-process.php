@@ -1,4 +1,6 @@
 <?php
+
+
 $errormsg = "";
 if (empty($_POST["fname"])) {
 	$errormsg .= "Name required. ";
@@ -48,22 +50,42 @@ if (empty($_POST["message"])) {
 
 //upload files 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $targetDirectory = "uploads/";
-    $targetFile = $targetDirectory . basename($_FILES["file"]["name"]);
+	$targetDirectory = "uploads/";
+	$targetFile = $targetDirectory . basename($_FILES["file"]["name"]);
 
 	$uploads = move_uploaded_file($_FILES["file"]["tmp_name"], $targetFile);
 
-    if (!$uploads) {
+	if (!$uploads) {
 		$errormsg .= "Sorry, there was an error uploading your file.";
-    } 
+	}
 } else {
-    $errormsg .= "Invalid request method.";
+	$errormsg .= "Invalid request method.";
 }
 // print_r($_POST);
 // print_r($_FILES);
 
 $success = '';
 if (!$errormsg) {
+	// var_dump(array($fname, $email, $phone, $service, $message, $_FILES["file"]["name"]));
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		// CSV file path
+		$csvFilePath = "csv/data.csv";
+		$fileName = $_FILES["file"]["name"];
+		$dateNow = date('Y-m-d H:i:s');
+
+		// Append data to the CSV file
+		$data = array($fname, $email, $phone, $ages, $dept, $education, $branch, $message, $fileName);
+		$fp = fopen($csvFilePath, "a");
+		fputcsv($fp, $data);
+		fclose($fp);
+
+		include_once("connection.php");
+
+		$sql = "INSERT INTO Applicant (name, email, phone, education, position, branch, summary, filename, created_at, updated_at) VALUES ('$fname', '$email', '$phone', '$education', '$dept', '$branch', '$message', '$fileName', '$dateNow', NULL)";
+		
+		mysqli_query($mysqli, $sql);
+	}
 
 	echo "success";
 
