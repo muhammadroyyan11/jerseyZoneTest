@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	
+	<title>Clean Form - PHP Working Contact Quote Booking JobApply Reservation Multi-purpose Form</title>	
+	<!-- set your website meta description and keywords -->
+	<meta name="description" content="Add your business website description here">
+	<meta name="keywords" content="Add your business website keywords here">
+	<!-- set your website favicon -->
+	<link href="favicon.ico" rel="icon">
+	
+	<!-- Font Awesome Stylesheets -->
+	<link rel="stylesheet" href="css/fontawesome/all.min.css">
+	<!-- Template Main Stylesheets -->
+	<link rel="stylesheet" href="css/contact-form-php-style.css" type="text/css">
+</head>
+
+<body>	
+	<!-- start contact -->
+	<section id="contact-form-section" class="contact-form-section">
+		<div class="container">
+			<div class="formrow">
+				<div class="col-12">
+					<div class="contact-form-title-wrap">
+						<h2 class="title-text"><span>Send me a <strong>Message</strong></span></h2>
+						<div class="title-line text-center">
+							<span class="short-line"></span>
+							<span class="long-line"></span>
+						</div><!-- end title-line -->
+					</div><!-- end contact-form-title-wrap -->
+					<div class="intro-text text-center">
+						A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+					</div><!-- end intro-text -->
+				</div><!--End col-12 -->
+				
+				<div class="col-8 col-offset-2">
+					
+					<div class="col-12">
+						<div class="title-box">
+							<h3>Write <strong>Message</strong></h3>
+						</div><!-- end title-box -->
+						<!-- start contact form -->
+						<form id="contactForm" name="contactform" action="contact-process-non-ajax.php" method="post" class="mgscleanform">
+							<div id="msgContactSubmit" class="hidden"></div>
+							<div class="form-group">
+								<input name="fname" id="fname" class="form-control" type="text" required> 
+								<div class="input-group-icon"><i class="fa-solid fa-user"></i></div>
+								<label class="form-label">Your Name*</label>
+							</div><!-- end form-group -->
+							<div class="form-group">
+								<input name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" type="email" required> 
+								<div class="input-group-icon"><i class="fa-solid fa-envelope"></i></div>
+								<label class="form-label">Your Email*</label>
+							</div><!-- end form-group -->
+							<div class="form-group">
+								<input name="phone" id="phone" class="form-control" type="text" required>
+								<div class="input-group-icon"><i class="fa-solid fa-phone"></i></div>
+								<label class="form-label">Contact Phone*</label>
+							</div><!-- end form-group -->
+							<div class="form-group">
+								<textarea rows="3" name="message" id="message" class="form-control" required></textarea>
+								<div class="input-group-icon"><i class="fa-solid fa-info"></i></div>
+								<label class="form-label">Write comment here*</label>
+							</div><!-- end form-group -->
+							<div class="form-group">
+								<div class="help-block with-errors"></div>
+								<ul class="mgsstyle-checkbox mgscheckbox-style list-unstyled">
+									<li><input name="cookieconsent" id="cookieconsent" type="checkbox" value="1" required data-error="Required Consent"><label for="cookieconsent">I Consent to Collect my data according to the <a href="javascript:void(0)">Privacy Policy</a></label></li>
+								</ul>
+							</div><!-- end form-group -->
+							
+							<div id="submitButtonHolder" class="form-group clearfix last">
+								<button type="submit" id="submit" class="btn btn-custom">Send</button>
+							</div><!-- end form-group -->
+							<div class="clearfix"></div>
+						</form><!-- end form -->
+						<!-- end contact form -->
+					</div><!-- end col-12 -->
+					
+				</div><!-- end col-sm-8 -->
+				
+				<!-- start contact Info -->
+				<div class="col-12">
+					<div class="contactInfo-wrap">
+						<div class="col-12">
+							<div class="title-box">
+								<h3>Contact <strong>Info</strong></h3>
+							</div><!-- end title-box --> 
+						</div><!-- end col-12 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<div class="contact-icon">
+										<i class="fa-solid fa-location-dot"></i>
+									</div><!-- end contact-icon -->
+									<div class="contact-desc">
+										<h4>70 Trent Rd, Luton LU3 1TA</h4>
+									</div><!-- end contact-desc -->
+								</div><!-- end contact-item-inner -->
+							</div><!-- end contact-item -->
+						</div><!-- end col-4 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<div class="contact-icon">
+										<i class="fa-solid fa-envelope"></i>
+									</div><!-- end contact-icon -->
+									<div class="contact-desc">
+										<h4><a href="mailto:sales@yourwebsite.com">sales@website.com</a></h4>
+									</div><!-- end contact-desc -->
+								</div><!-- end contact-item-inner -->
+							</div><!-- end contact-item --> 
+						</div><!-- end col-4 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<div class="contact-icon">
+										<i class="fa-solid fa-phone"></i>
+									</div><!-- end contact-icon -->
+									<div class="contact-desc">
+										<h4><a href="tel:000-0000-0000">+000 0000 0000</a></h4>
+									</div><!-- end contact-desc -->
+								</div><!-- end contact-item-inner --> 
+							</div><!-- end contact-item --> 
+						</div><!-- end col-4 -->
+					</div><!-- end contactInfo-wrap -->
+				</div><!-- end col-12 -->
+				<!-- end contact Info -->
+				
+			</div><!-- end formrow -->
+			
+			<div class="formrow">					
+				<div class="footer-top col-12">
+					<p class="text-center copyright">&copy; <span id="mgsYear"></span> Clean Form. <a href="https://1.envato.market/AYdWK" class="footer-site-link">MGScoder</a> All rights reserved. <a href="https://1.envato.market/dj7P7" class="footer-site-link">Buy Clean Form Script</a></p>
+				</div><!-- end col --> 
+			</div><!-- end formrow -->
+			
+		 </div><!-- end container --> 
+	</section>
+	<!-- end contact -->	
+	
+</body>
+</html>

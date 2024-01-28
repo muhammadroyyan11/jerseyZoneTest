@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	
+	<title>Clean Form - PHP Working Contact Quote Booking JobApply Reservation Multi-purpose Form</title>
+	<!-- set your website meta description and keywords -->
+	<meta name="description" content="Add your business website description here">
+	<meta name="keywords" content="Add your business website keywords here">
+	<!-- set your website favicon -->
+	<link href="favicon.ico" rel="icon">
+	
+	<!-- Font Awesome Stylesheets -->
+	<link rel="stylesheet" href="css/fontawesome/all.min.css">
+	<!-- datepicker Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<!-- sweetalert Stylesheets -->
+	<link rel="stylesheet" href="css/sweetalert.css" type="text/css">
+	<!-- Template Main Stylesheets -->
+	<link rel="stylesheet" href="css/quote-form-style3.css" type="text/css">	
+</head>
+
+<body>	
+	<!-- start contact -->
+	<section id="quote-form-section" class="quote-form-section">
+		<div class="container">
+			<div class="formrow">				
+				<div class="col-12">
+					<div class="contact-form-title-wrap">
+						<h2 class="title-text"><span>Quote For <strong>Cleaning Service</strong></span></h2>
+						<div class="title-line text-center">
+							<span class="short-line"></span>
+							<span class="long-line"></span>
+						</div><!-- end title-line -->
+					</div><!-- end contact-form-title-wrap -->
+					<div class="intro-text text-center">
+						Please fill the form with all Property Information you need to clean and Submit. We will Contact You within 24 hours.
+					</div><!-- end intro-text -->
+				</div><!--End col-12 -->
+				
+				<div class="col-8 col-offset-2">
+				
+					<div class="col-12">
+						<div class="title-box">
+							<h3>Quotation <strong>Request Form</strong></h3>
+						</div><!-- end title-box -->
+						
+						<!-- start Quote form -->
+						<form id="quoteForm" name="quoteform" data-toggle="validator" class="mgscleanform">
+							<span class="sub-text">* Required fields</span>						
+							<h4>Select Property Type<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-radio mgsimagetyperadio list-unstyled">
+									<li><input type="radio" name="servicetype" id="servicetype1" value="Residential" required data-error="Please Select Property Type" />
+										<label for="servicetype1"><img src="images/home.png" alt="Residential" /> Residential</label>
+									</li>
+									<li><input type="radio" name="servicetype" id="servicetype2" value="Commercial" required data-error="Please Select Property Type" />
+										<label for="servicetype2"><img src="images/commercial.png" alt="Commercial" /> Commercial</label>
+									</li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Select Cleaning Type<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-radio mgsstyleradio list-unstyled">
+									<li><input type="radio" name="cleaningtype" id="cleaningtype1" value="Shifting Cleaning" required data-error="Please Select Cleaning Type" /><label for="cleaningtype1">Shifting Cleaning</label></li>
+									<li><input type="radio" name="cleaningtype" id="cleaningtype2" value="Seasonal Cleaning" required data-error="Please Select Cleaning Type" /><label for="cleaningtype2">Seasonal Cleaning</label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>ProPerty Size (sq. ft.)<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-radio mgsstyleradio list-unstyled">
+									<li><input type="radio" name="propertysize" id="propertysize1" value="0-1000" required data-error="Please Select ProPerty Size" /><label for="propertysize1">0-1000</label></li>
+									<li><input type="radio" name="propertysize" id="propertysize2" value="1001 - 1500" required data-error="Please Select ProPerty Size" /><label for="propertysize2">1001 - 1500</label></li>
+									<li><input type="radio" name="propertysize" id="propertysize3" value="1501 - 2000" required data-error="Please Select ProPerty Size" /><label for="propertysize3">1501 - 2000</label></li>
+									<li><input type="radio" name="propertysize" id="propertysize4" value="2001 - 2500" required data-error="Please Select ProPerty Size" /><label for="propertysize4">2001 - 2500</label></li>
+									<li><input type="radio" name="propertysize" id="propertysize5" value="2501 - 3000" required data-error="Please Select ProPerty Size" /><label for="propertysize5">2501 - 3000</label></li>
+									<li><input type="radio" name="propertysize" id="propertysize6" value="3000+" required data-error="Please Select ProPerty Size" /><label for="propertysize6">3000+</label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Bedrooms<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-radio mgsstyleradio list-unstyled">
+									<li><input type="radio" name="bedrooms" id="bedrooms1" value="1" required data-error="Please Select Bedrooms" /><label for="bedrooms1">1</label></li>
+									<li><input type="radio" name="bedrooms" id="bedrooms2" value="2" required data-error="Please Select Bedrooms" /><label for="bedrooms2">2</label></li>
+									<li><input type="radio" name="bedrooms" id="bedrooms3" value="3" required data-error="Please Select Bedrooms" /><label for="bedrooms3">3</label></li>
+									<li><input type="radio" name="bedrooms" id="bedrooms4" value="4" required data-error="Please Select Bedrooms" /><label for="bedrooms4">4</label></li>
+									<li><input type="radio" name="bedrooms" id="bedrooms5" value="5" required data-error="Please Select Bedrooms" /><label for="bedrooms5">5</label></li>
+									<li><input type="radio" name="bedrooms" id="bedrooms6" value="5+" required data-error="Please Select Bedrooms" /><label for="bedrooms6">5+</label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Bathrooms<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-radio mgsstyleradio list-unstyled">
+									<li><input type="radio" name="bathrooms" id="bathrooms1" value="1" required data-error="Please Select Bathrooms" /><label for="bathrooms1">1</label></li>
+									<li><input type="radio" name="bathrooms" id="bathrooms2" value="2" required data-error="Please Select Bathrooms" /><label for="bathrooms2">2</label></li>
+									<li><input type="radio" name="bathrooms" id="bathrooms3" value="3" required data-error="Please Select Bathrooms" /><label for="bathrooms3">3</label></li>
+									<li><input type="radio" name="bathrooms" id="bathrooms4" value="4" required data-error="Please Select Bathrooms" /><label for="bathrooms4">4</label></li>
+									<li><input type="radio" name="bathrooms" id="bathrooms5" value="5" required data-error="Please Select Bathrooms" /><label for="bathrooms5">5</label></li>
+									<li><input type="radio" name="bathrooms" id="bathrooms6" value="5+" required data-error="Please Select Bathrooms" /><label for="bathrooms6">5+</label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Sitting/Conference Room<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-radio mgsstyleradio list-unstyled">
+									<li><input type="radio" name="sittingroom" id="sittingroom1" value="Yes" required data-error="Please Select Sitting Room" /><label for="sittingroom1">Yes</label></li>
+									<li><input type="radio" name="sittingroom" id="sittingroom2" value="No" required data-error="Please Select Sitting Room" /><label for="sittingroom2">No</label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Kitchen<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-radio mgsstyleradio list-unstyled">
+									<li><input type="radio" name="kitchen" id="kitchen1" value="Null" required data-error="Please Select Kitchen" /><label for="kitchen1">Null</label></li>
+									<li><input type="radio" name="kitchen" id="kitchen2" value="1" required data-error="Please Select Kitchen" /><label for="kitchen2">1</label></li>
+									<li><input type="radio" name="kitchen" id="kitchen3" value="2" required data-error="Please Select Kitchen" /><label for="kitchen3">2</label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Kitchen Items:</h4>
+							<div class="form-group has-feedback">
+								<ul class="mgs-checkbox mgsstylecheckbox list-unstyled">
+									<li><input type="checkbox" name="kitchenitems[]" id="kitchenitems1" value="Not Required" /><label for="kitchenitems1">Not Required</label></li>
+									<li><input type="checkbox" name="kitchenitems[]" id="kitchenitems2" value="Refrigerator" /><label for="kitchenitems2">Refrigerator</label></li>
+									<li><input type="checkbox" name="kitchenitems[]" id="kitchenitems3" value="Washing Machine" /><label for="kitchenitems3">Washing Machine</label></li>
+									<li><input type="checkbox" name="kitchenitems[]" id="kitchenitems4" value="Microwave" /><label for="kitchenitems4">Microwave</label></li>
+									<li><input type="checkbox" name="kitchenitems[]" id="kitchenitems5" value="Tumble Dryer" /><label for="kitchenitems5">Tumble Dryer</label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Preferred Date &amp; Time<span class="mandatory">*</span>:</h4>
+							<div id="preferred-date" class="form-group has-feedback">
+								<input type="text" class="form-control" name="preferreddate" id="preferreddate" placeholder="dd MM yyyy - HH:ii" readonly required data-error="Please Select Preferred Date &amp; Time">
+								<div class="input-group-icon"><i class="fa-solid fa-calendar"></i></div>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<h4>Property Address<span class="mandatory">*</span>:</h4>
+							<div class="form-group has-feedback">
+								<input class="form-control" name="propertyaddress" id="propertyaddress" type="text" placeholder="Property Address*" required data-error="Please enter Property address">
+								<div class="input-group-icon"><i class="fa-solid fa-location-dot"></i></div>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+													
+							<div class="form-group has-feedback">
+								<input name="fname" id="fname" placeholder="Your Name*" class="form-control" type="text" required data-error="Please enter Name"> 
+								<div class="input-group-icon"><i class="fa-solid fa-user"></i></div>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<input name="email" id="email" placeholder="Your Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" type="email" required data-error="Please enter valid Email"> 
+								<div class="input-group-icon"><i class="fa-solid fa-envelope"></i></div>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<input name="phone" id="phone" placeholder="Contact Phone*" class="form-control" type="text" required data-error="Please enter valid Phone">
+								<div class="input-group-icon"><i class="fa-solid fa-phone"></i></div>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							
+							<div class="form-group has-feedback">
+								<textarea rows="3" name="message" id="message" placeholder="Write comment here*" class="form-control" required data-error="Please enter message"></textarea>
+								<div class="input-group-icon"><i class="fa-solid fa-info"></i></div>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							<div class="form-group">
+								<div class="g-recaptcha" data-sitekey="6LcKERYUAAAAALKpLZO8T9V8flKJUmCd_KHDfTJq"></div>
+							</div><!-- end form-group recaptcha -->
+							<div class="form-group has-feedback">
+								<ul class="mgsstyle-checkbox mgscheckbox-style list-unstyled">
+									<li><input name="cookieconsent" id="cookieconsent" type="checkbox" value="1" required data-error="Required Consent"><label for="cookieconsent">I Consent to Collect my data according to the <a href="javascript:void(0)">Privacy Policy</a></label></li>
+								</ul>
+								<div class="help-block with-errors"></div>
+							</div><!-- end form-group -->
+							<div id="processing-image" style="display:none;">
+								<img src="images/processing-image.gif" alt="Processing" />
+							</div><!-- end processing-image -->
+							<div id="msgContactSubmit" class="hidden"></div>
+							<div id="submitButtonHolder" class="form-group">
+								<button type="submit" id="submit" class="btn btn-custom">Send</button>
+							</div><!-- end form-group -->
+						</form>
+						<!-- end Quote form -->
+					</div><!-- end col-12 -->
+				
+				</div><!-- end col-sm-8 -->
+				
+				<!-- start contact Info -->
+				<div class="col-12">
+					<div class="contactInfo-wrap">
+						<div class="col-12">
+							<div class="title-box">
+								<h3>Contact <strong>Info</strong></h3>
+							</div><!-- end title-box --> 
+						</div><!-- end col-12 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<div class="contact-icon">
+										<i class="fa-solid fa-location-dot"></i>
+									</div><!-- end contact-icon -->
+									<div class="contact-desc">
+										<h4>70 Trent Rd, Luton LU3 1TA</h4>
+									</div><!-- end contact-desc -->
+								</div><!-- end contact-item-inner -->
+							</div><!-- end contact-item -->
+						</div><!-- end col-4 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<div class="contact-icon">
+										<i class="fa-solid fa-envelope"></i>
+									</div><!-- end contact-icon -->
+									<div class="contact-desc">
+										<h4><a href="mailto:sales@yourwebsite.com">sales@website.com</a></h4>
+									</div><!-- end contact-desc -->
+								</div><!-- end contact-item-inner -->
+							</div><!-- end contact-item --> 
+						</div><!-- end col-4 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<div class="contact-icon">
+										<i class="fa-solid fa-phone"></i>
+									</div><!-- end contact-icon -->
+									<div class="contact-desc">
+										<h4><a href="tel:000-0000-0000">+000 0000 0000</a></h4>
+									</div><!-- end contact-desc -->
+								</div><!-- end contact-item-inner --> 
+							</div><!-- end contact-item --> 
+						</div><!-- end col-4 -->
+					</div><!-- end contactInfo-wrap -->
+				</div><!-- end col-12 -->
+				<!-- end contact Info -->
+				
+			</div><!-- end formrow -->
+			
+			<div class="formrow">					
+				<div class="footer-top col-12">
+					<p class="text-center copyright">&copy; <span id="mgsYear"></span> Clean Form. <a href="https://1.envato.market/AYdWK" class="footer-site-link">MGScoder</a> All rights reserved. <a href="https://1.envato.market/dj7P7" class="footer-site-link">Buy Clean Form Script</a></p>
+				</div><!-- end col --> 
+			</div><!-- end formrow -->
+			
+		 </div><!-- end container --> 
+	</section>
+	<!-- end contact -->
+	
+	<!-- jQuery Library -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- google recaptcha -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<!-- Bootstrap Datepicker -->  
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	<!-- sweetalert Js -->
+    <script src="js/sweetalert.min.js"></script>
+	<!-- Form Validator for Bootstrap 3 -->
+	<script src="js/validator.min.js"></script>
+	<!-- SmartForm main Js -->
+	<script src="js/quote-form-style3.js"></script>
+	
+</body>
+</html>

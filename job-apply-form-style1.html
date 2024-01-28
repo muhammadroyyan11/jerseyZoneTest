@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	
+	<title>Clean Form - PHP Working Contact Quote Booking JobApply Reservation Multi-purpose Form</title>	
+	<!-- set your website meta description and keywords -->
+	<meta name="description" content="Add your business website description here">
+	<meta name="keywords" content="Add your business website keywords here">
+	<!-- set your website favicon -->
+	<link href="favicon.ico" rel="icon">
+	
+	<!-- Font Awesome Stylesheets -->
+	<link rel="stylesheet" href="css/fontawesome/all.min.css">
+	<!-- sweetalert Stylesheets -->
+	<link rel="stylesheet" href="css/sweetalert.css" type="text/css">
+	<!-- Template Main Stylesheets -->
+	<link rel="stylesheet" href="css/job-apply-form-style1.css" type="text/css">	
+</head>
+
+<body>	
+	<!-- start contact -->
+	<section id="jobapply-form-section" class="jobapply-form-section">
+		<div class="container">
+			<div class="formrow">
+				<div class="col-12">
+					<div class="contact-form-title-wrap">
+						<h2 class="title-text"><span>Job <strong>Application</strong></span></h2>
+						<div class="title-line text-center">
+							<span class="short-line"></span>
+							<span class="long-line"></span>
+						</div><!-- end title-line -->
+					</div><!-- end contact-form-title-wrap -->
+					<div class="intro-text text-center">
+						A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+					</div><!-- end intro-text -->
+				</div><!-- end col-12 -->
+				<div class="col-6">
+					<div class="title-box">
+						<h3>Contact <strong>Info</strong></h3>
+					</div><!-- end title-box -->
+					<div class="imageBox">
+						<img src="images/office.jpg" alt="" />
+					</div><!-- end title-box --> 
+					<div class="contact-info">
+						<ul class="list-unstyled">
+							<li><i class="fa-solid fa-location-dot"></i>70 Trent Rd, Luton LU3 1TA, UK</li>
+							<li><i class="fa-solid fa-phone"></i><a href="tel:000-0000-0000">000 0000 0000</a></li>
+							<li><i class="fa-solid fa-envelope"></i><a href="mailto:sales@m.com">sales@website.com</a></li>
+							<li><i class="fa-solid fa-globe"></i><a href="#">yourwebsite.com</a></li>
+						</ul>
+					</div>
+				</div><!-- end col-6 -->
+				<div class="col-6">
+					<div class="title-box">
+						<h3>Application <strong>Form</strong></h3>
+					</div><!-- end title-box --> 
+					<!-- start contact Form -->
+					<form id="jobapplyForm" name="jobapplyform" data-toggle="validator" class="mgscleanform"  enctype="multipart/form-data">
+						<span class="sub-text">* Required fields</span>
+						<div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<input name="fname" id="fname" class="form-control" type="text" required data-error="Please enter Name"> 
+							<div class="input-group-icon"><i class="fa-solid fa-user"></i></div>
+							<label class="form-label">Your Name*</label>
+						</div><!-- end form-group -->
+						<div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<input name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" type="email" required data-error="Please enter valid email"> 
+							<div class="input-group-icon"><i class="fa-solid fa-envelope"></i></div>
+							<label class="form-label">Your Email*</label>
+						</div><!-- end form-group -->
+						<div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<input name="phone" id="phone" class="form-control" type="text" required data-error="Please enter valid Phone">
+							<div class="input-group-icon"><i class="fa-solid fa-phone"></i></div>
+							<label class="form-label">Contact Phone*</label>
+						</div><!-- end form-group -->
+						<div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<input name="address" id="address" class="form-control" type="text" required data-error="Please enter Address">
+							<div class="input-group-icon"><i class="fa-solid fa-book"></i></div>
+							<label class="form-label">Address*</label>
+						</div><!-- end form-group -->
+						<div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<select name="jobtitle" id="jobtitle" class="form-control" required data-error="Please Select Job Title">
+								<option value="">--- Select Job Title* ---</option>
+								<option value="Sr. App Developer">Sr. App Developer</option>
+								<option value="Sr. Software Engineer">Sr. Software Engineer</option>
+								<option value="Sr. Web Designer">Sr. Web Designer</option>
+								<option value="Sr. Graphic Designer">Sr. Graphic Designer</option>
+							</select>
+							<div class="input-group-icon"><i class="fa-solid fa-gear"></i></div> 
+						</div><!-- end form-group -->
+						<div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<textarea rows="3" name="message" id="message" class="form-control" required data-error="Please enter Contact message"></textarea>
+							<div class="input-group-icon"><i class="fa-solid fa-info"></i></div>
+							<label class="form-label">Write Cover Letter*</label>
+						</div>
+						<div class="form-group">
+							<label class="input-group-btn">
+								<span class="btn">
+									Browse&hellip; <input name="userfile" id="userfile" type="file">
+								</span>
+							</label>
+							<input type="text" id="attachedFile" class="form-control" placeholder="Browse to select CV" readonly>
+						</div><!-- end form-group -->
+						<div class="form-group">
+							<div class="help-block with-errors"></div>
+							<div id="humanCheckCaptchaBox"></div><div id="firstDigit"></div> + <div id="secondDigit"></div> = <input name="humanCheckCaptchaInput" id="humanCheckCaptchaInput" placeholder="" maxlength="3" class="form-control" type="text" required data-error="Please solve Human Check Captcha">
+						</div><!-- end form-group -->
+						<div class="form-group has-feedback">
+							<div class="help-block with-errors"></div>
+							<ul class="mgsstyle-checkbox mgscheckbox-style list-unstyled">
+								<li><input name="cookieconsent" id="cookieconsent" type="checkbox" value="1" required data-error="Required Consent"><label for="cookieconsent">I Consent to Collect my data according to the <a href="javascript:void(0)">Privacy Policy</a></label></li>
+							</ul>
+						</div><!-- end form-group -->
+						<div id="processing-image" style="display:none;">
+							<img src="images/processing-image.gif" alt="Processing" />
+						</div><!-- end processing-image -->
+						<div id="submitButtonHolder" class="form-group last">
+							<div id="msgContactSubmit" class="hidden"></div>
+							<button type="submit" id="submit" class="btn btn-custom">Apply</button>
+						</div><!-- end form-group -->
+					</form>
+					<!-- end contact Form -->
+				</div><!-- end col-6 -->
+			</div><!-- end formrow -->
+			
+			<div class="formrow">					
+				<div class="footer-top col-12">
+					<p class="text-center copyright">&copy; <span id="mgsYear"></span> Clean Form. <a href="https://1.envato.market/AYdWK" class="footer-site-link">MGScoder</a> All rights reserved. <a href="https://1.envato.market/dj7P7" class="footer-site-link">Buy Clean Form Script</a></p>
+				</div><!-- end col --> 
+			</div><!-- end formrow -->
+			
+		 </div><!-- end container -->
+	</section>
+	<!-- end contact -->
+	
+	<!-- jQuery Library -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- sweetalert Js -->
+    <script src="js/sweetalert.min.js"></script>
+	<!-- Form Validator -->
+	<script src="js/validator.min.js"></script>
+	<!-- contact form Js -->
+	<script src="js/job-apply-form-style1.js"></script>
+	
+</body>
+</html>

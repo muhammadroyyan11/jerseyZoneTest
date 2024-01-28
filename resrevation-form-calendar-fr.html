@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	
+	<title>Clean Form - PHP Working Contact Quote Booking JobApply Reservation Multi-purpose Form</title>	
+	<!-- set your website meta description and keywords -->
+	<meta name="description" content="Add your business website description here">
+	<meta name="keywords" content="Add your business website keywords here">
+	<!-- set your website favicon -->
+	<link href="favicon.ico" rel="icon">
+	
+	<!-- Font Awesome Stylesheets -->
+	<link rel="stylesheet" href="css/fontawesome/all.min.css">
+	<!-- datepicker Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<!-- sweetalert Stylesheets -->
+	<link rel="stylesheet" href="css/sweetalert.css" type="text/css">
+	<!-- Template Main Stylesheets -->
+	<link rel="stylesheet" href="css/resrevation-form-style1.css" type="text/css">	
+</head>
+
+<body>	
+	<!-- start reservation -->
+	<section id="reservation-form-section" class="reservation-form-section">
+		<div class="container">
+			<div class="formrow">
+				<div class="col-12">
+					<div class="contact-form-title-wrap">
+						<h2 class="title-text"><span>MFC <strong>Restaurant</strong></span></h2>
+						<div class="title-line text-center">
+							<span class="short-line"></span>
+							<span class="long-line"></span>
+						</div><!-- end title-line -->
+					</div><!-- end contact-form-title-wrap -->
+					<div class="intro-text text-center">
+						A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+					</div><!-- end intro-text -->
+				</div><!--End col-12 -->
+				
+				<!-- start contact Info -->
+				<div class="col-12">
+					<div class="contactInfo-wrap">
+						<div class="col-12">
+							<div class="title-box">
+								<h3>Best of <strong>Experience</strong></h3>
+							</div><!-- end title-box --> 
+						</div><!-- end col-12 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<img src="images/1.jpg" alt="" />
+								</div><!-- end contact-item-inner -->
+							</div><!-- end contact-item -->
+						</div><!-- end col-4 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<img src="images/2.jpg" alt="" />
+								</div><!-- end contact-item-inner -->
+							</div><!-- end contact-item --> 
+						</div><!-- end col-4 -->
+						<div class="col-4">
+							<div class="contact-item">
+								<div class="contact-item-inner">
+									<img src="images/3.jpg" alt="" />
+								</div><!-- end contact-item-inner --> 
+							</div><!-- end contact-item --> 
+						</div><!-- end col-4 -->
+					</div><!-- end contactInfo-wrap -->
+				</div><!-- end col-12 -->
+				<!-- end contact Info -->
+								
+				<!-- start contact form -->
+				<div class="col-8 col-offset-2">
+					
+					<div class="col-12">
+						<div class="title-box">
+							<h3>Book a <strong>Table</strong></h3>
+						</div><!-- end title-box -->
+						<form id="reservationForm" name="reservationform" data-toggle="validator" class="mgscleanform">
+							<span class="sub-text">* Required fields</span>
+							<div id="msgContactSubmit" class="hidden"></div>
+							<div class="form-group has-feedback">
+								<div class="help-block with-errors"></div>
+								<input name="fname" id="fname" placeholder="Your Name*" class="form-control" type="text" required data-error="Please enter Name"> 
+								<div class="input-group-icon"><i class="fa-solid fa-user"></i></div>
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<div class="help-block with-errors"></div>
+								<input name="email" id="email" placeholder="Your Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" type="email" required data-error="Please enter valid Email"> 
+								<div class="input-group-icon"><i class="fa-solid fa-envelope"></i></div>
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<div class="help-block with-errors"></div>
+								<input name="phone" id="phone" placeholder="Contact Phone*" class="form-control" type="text" required data-error="Please enter valid Phone">
+								<div class="input-group-icon"><i class="fa-solid fa-phone"></i></div> 
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<div class="help-block with-errors"></div>
+								<input name="personcount" id="personcount" placeholder="Number of Person*" class="form-control" type="number" min="1" max="500" required data-error="Please enter Person">
+								<div class="input-group-icon"><i class="fa-solid fa-user"></i></div> 
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<div class="help-block with-errors"></div>
+								<div id="reservation-DateTime" class="input-append date">
+									<input name="reservationdatetime" id="reservationdatetime" placeholder="Reservation date &amp; time*" class="form-control" type="text" readonly required>
+									<span class="add-on"><i class="icon-remove"></i></span>
+									<span class="add-on"><i class="icon-th"></i></span>
+									<div class="input-group-icon"><i class="fa-solid fa-calendar"></i></div>
+								</div>           
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<div class="help-block with-errors"></div>
+								<textarea rows="3" name="message" id="message" placeholder="Write short note here*" class="form-control" required data-error="Please enter message"></textarea>
+								<div class="input-group-icon"><i class="fa-solid fa-info"></i></div>
+							</div><!-- end form-group -->
+							<div class="form-group">
+								<div class="help-block with-errors"></div>
+								<div id="humanCheckCaptchaBox"></div><div id="firstDigit"></div> + <div id="secondDigit"></div> = <input name="humanCheckCaptchaInput" id="humanCheckCaptchaInput" placeholder="" maxlength="3" class="form-control" type="text" required data-error="Please solve Human Check Captcha">
+							</div><!-- end form-group -->
+							<div class="form-group has-feedback">
+								<div class="help-block with-errors"></div>
+								<ul class="mgsstyle-checkbox mgscheckbox-style list-unstyled">
+									<li><input name="cookieconsent" id="cookieconsent" type="checkbox" value="1" required data-error="Required Consent"><label for="cookieconsent">I Consent to Collect my data according to the <a href="javascript:void(0)">Privacy Policy</a></label></li>
+								</ul>
+							</div><!-- end form-group -->
+							<div id="processing-image" style="display:none;">
+								<img src="images/processing-image.gif" alt="Processing" />
+							</div><!-- end processing-image -->
+							<div id="submitButtonHolder" class="form-group">
+								<button type="submit" id="submit" class="btn btn-custom">Send</button>
+							</div><!-- end form-group -->
+						</form>
+					</div><!-- end col-12 -->
+					
+				</div><!-- end col-sm-8 -->
+				<!-- end contact form -->
+				
+			</div><!-- end formrow -->
+			
+			<div class="formrow">					
+				<div class="footer-top col-12">
+					<p class="text-center copyright">&copy; <span id="mgsYear"></span> Clean Form. <a href="https://1.envato.market/AYdWK" class="footer-site-link">MGScoder</a> All rights reserved. <a href="https://1.envato.market/dj7P7" class="footer-site-link">Buy Clean Form Script</a></p>
+				</div><!-- end col --> 
+			</div><!-- end formrow -->
+			
+		 </div><!-- end container --> 
+	</section>
+	<!-- end contact -->
+	
+	<!-- jQuery Library -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- Datepicker -->  
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	<!-- Datetimepicker Calendar Language JS -->
+	<script src="js/locales/bootstrap-datetimepicker.fr.js"></script>
+	<!-- sweetalert Js -->
+    <script src="js/sweetalert.min.js"></script>
+	<!-- Form Validator -->
+	<script src="js/validator.min.js"></script>
+	<!-- contact form Js -->
+	<script src="js/resrevation-form-calendar-fr.js"></script>
+	
+</body>
+</html>
